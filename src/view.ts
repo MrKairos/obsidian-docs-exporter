@@ -29,6 +29,7 @@ const PREVIEW_CSS = `
 .de-preview strong { font-weight: 600; }
 .de-preview hr { border: none; border-top: 1px solid var(--background-modifier-border); margin: 20px 0; }
 .de-preview a  { color: var(--link-color); text-decoration: none; }
+.de-preview .de-wikilink { color: var(--link-color); text-decoration: none; border-bottom: 1px dashed currentColor; opacity: 0.85; }
 .de-preview table { width: 100%; border-collapse: collapse; font-size: 0.875em; margin: 8px 0 14px; }
 .de-preview th { font-weight: 600; text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--background-modifier-border); }
 .de-preview td { padding: 6px 10px; border-bottom: 1px solid var(--background-modifier-border-focus); }
@@ -179,6 +180,7 @@ export class DocsExporterView extends ItemView {
 .de-preview h2 { color:${v["--de-text"]}; }
 .de-preview h3 { color:${v["--de-accent2"]}; }
 .de-preview a  { color:${v["--de-accent2"]}; }
+.de-preview .de-wikilink { color:${v["--de-accent2"]}; border-bottom-color:${v["--de-accent2"]}; }
 .de-preview strong { color:${v["--de-text"]}; }
 .de-preview hr { border-top-color:${v["--de-border"]}; }
 .de-preview th { border-bottom-color:${v["--de-border"]}; color:${v["--de-accent2"]}; }
@@ -201,6 +203,7 @@ export class DocsExporterView extends ItemView {
 .de-preview h2 { color:${n.text}; }
 .de-preview h3 { color:${n.textSec}; }
 .de-preview a  { color:${n.link}; }
+.de-preview .de-wikilink { color:${n.link}; border-bottom-color:${n.link}; }
 .de-preview strong { color:${n.text}; }
 .de-preview hr { border-top-color:${n.border}; }
 .de-preview th { background:${n.surface}; border-bottom-color:${n.border}; color:${n.text}; }

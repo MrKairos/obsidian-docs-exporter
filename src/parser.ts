@@ -87,6 +87,27 @@ export function buildParser(): ParseFn {
     html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 
+    // ── 7b. Wiki-links: [[Page]], [[Page|alias]], [[Page#Section]], [[#Section]] ──
+    // Image embeds (![[img]]) are resolved before the parser runs; remaining
+    // [[…]] (and any non-image ![[…]] embeds) become readable links here.
+    html = html.replace(
+      /!?\[\[([^\]\n|#]*)(?:#([^\]\n|]*))?(?:\|([^\]\n]*))?\]\]/g,
+      (_m, page, section, alias) => {
+        const p = (page || "").trim();
+        const sec = (section || "").trim();
+        const al = (alias || "").trim();
+        let display = al;
+        if (!display) {
+          if (p && sec) display = `${p} › ${sec}`;
+          else display = p || sec;
+        }
+        // Same-document section link → real in-page anchor.
+        if (!p && sec) return `<a class="de-wikilink" href="#${slugify(sec)}">${display}</a>`;
+        // Dangling note reference in a standalone export → non-navigating span.
+        return `<span class="de-wikilink">${display}</span>`;
+      }
+    );
+
     // ── 8. Callouts (must run before blockquotes) ──
     html = html.replace(/^> \[!(\w+)\][+\-]?([^\n]*)\n((?:>[ \t]?[^\n]*\n?)*)/gm, (_m, type, title, body) => {
       const t = title.trim() || (type.charAt(0).toUpperCase() + type.slice(1).toLowerCase());

@@ -1,9 +1,9 @@
 {
   "id": "docs-exporter",
   "name": "Docs Exporter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "minAppVersion": "1.0.0",
-  "description": "Export current note as a styled HTML document with theme selection, noindex toggle, Obsidian wiki-image support and a click-to-zoom image lightbox.",
+  "description": "Export current note as a styled HTML document with theme selection, noindex toggle, Obsidian wiki-image and wiki-link support, and a click-to-zoom image lightbox.",
   "author": "MrKairos",
   "authorUrl": "https://github.com/MrKairos",
   "isDesktopOnly": true

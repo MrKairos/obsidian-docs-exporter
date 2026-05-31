@@ -8,6 +8,7 @@ Obsidian plugin to export notes as styled, self-contained HTML — theme picker,
 - **Theme picker** — 6 built-in styles (Acid, Mono, Slate, Graphite, Notion, Notion Dark) plus your own custom CSS styles.
 - **Self-contained export** — a single `.html` file with all CSS inlined; images are copied into a sibling `<note>_images/` folder.
 - **Markdown support** — headings, tables, task lists, callouts, blockquotes, fenced code with syntax highlighting (JS/TS/C#/GDScript), `table-of-contents` blocks and Mermaid placeholders.
+- **Wiki-links** — `[[Note]]`, `[[Note|alias]]`, `[[Note#Section]]` render as readable links; `[[#Section]]` links to an in-document anchor.
 - **Image lightbox** — click any image in the exported HTML to open it full-size with zoom in/out, wheel zoom, drag-to-pan and close (Esc / backdrop).
 - **`noindex` toggle** for documents you don't want indexed.
 - Obsidian wiki-image syntax: `![[image.png]]`, `![[image.png|300]]`, `![[image.png|300x200]]`.

@@ -1,7 +1,7 @@
 {
   "name": "obsidian-docs-exporter",
-  "version": "1.1.0",
-  "description": "Obsidian plugin to export notes as styled, self-contained HTML — theme picker, syntax highlighting, TOC, callouts and a click-to-zoom image lightbox.",
+  "version": "1.2.0",
+  "description": "Obsidian plugin to export notes as styled, self-contained HTML — theme picker, syntax highlighting, TOC, callouts, wiki-links and a click-to-zoom image lightbox.",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",

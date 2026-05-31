@@ -26,6 +26,7 @@ p { margin-bottom: 14px; }
 strong { color: var(--de-text); font-weight: 700; }
 em { opacity: 0.75; }
 a { color: var(--de-accent2); text-decoration: none; border-bottom: 1px solid currentColor; opacity: 0.8; }
+.de-wikilink { color: var(--de-accent2); text-decoration: none; border-bottom: 1px dashed currentColor; opacity: 0.8; }
 code { font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--de-code-bg); color: var(--de-accent); padding: 2px 7px; border-radius: 3px; border: 1px solid var(--de-border); }
 pre { background: var(--de-code-bg); border: 1px solid var(--de-border); border-radius: 6px; padding: 16px 20px; overflow-x: auto; margin-bottom: 20px; }
 pre code { background: none; border: none; padding: 0; color: var(--de-text); font-size: 12.5px; line-height: 1.5; white-space: pre; }
@@ -93,6 +94,7 @@ strong { font-weight: 600; color: ${c.text}; }
 em { color: ${c.textSec}; }
 hr { border: none; border-top: 1px solid ${c.border}; margin: 2em 0; }
 a { color: ${c.link}; text-decoration: none; border-bottom: 1px solid ${c.link}; }
+.de-wikilink { color: ${c.link}; text-decoration: none; border-bottom: 1px dashed ${c.link}; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 85%; background: ${c.codeBg}; color: ${c.codeText}; padding: 2px 6px; border-radius: 3px; }
 pre { background: ${c.surface}; border-radius: 4px; padding: 16px 20px; overflow-x: auto; margin-bottom: 20px; }
 pre code { background: none; color: ${c.text}; font-size: 13px; line-height: 1.5; white-space: pre; }
